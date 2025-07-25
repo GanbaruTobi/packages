@@ -7,6 +7,10 @@ docker build -t my-llvm-image4:latest -f llvm.Dockerfile .
 docker build -t my-dependencies-image3:latest -f dependencies.Dockerfile
 ```
 
+## notiz
+ld_preload
+ld_library_path
+patchelf
 
 ## Build instructions
 
