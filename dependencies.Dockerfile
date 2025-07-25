@@ -1,6 +1,5 @@
-ARG LLVM_VERSION=22.04-llvm19.1.7
 
-FROM ghcr.io/llvmparty/packages/ubuntu:${LLVM_VERSION} AS build
+FROM my-llvm-image4:latest AS build
 WORKDIR /tmp
 COPY \
     bitwuzla.cmake \
@@ -30,7 +29,7 @@ cmake --build build && \
 rm -rf build
 
 # Actual final image
-FROM ghcr.io/llvmparty/packages/ubuntu:${LLVM_VERSION} AS dependencies
+FROM my-llvm-image4:latest AS dependencies
 LABEL org.opencontainers.image.source=https://github.com/LLVMParty/packages
 
 COPY --from=build /dependencies /dependencies

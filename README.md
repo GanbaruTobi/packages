@@ -1,5 +1,12 @@
 # packages
 
+## was ich gemacht hab:
+
+docker build -t my-llvm-image4:latest -f llvm.Dockerfile .
+docker build -t my-dependencies-image3:latest -f dependencies.Dockerfile
+
+
+
 ## Build instructions
 
 **Note**: End users do not need to run these commands, they are just here for reference.

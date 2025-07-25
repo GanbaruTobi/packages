@@ -19,9 +19,9 @@ endif()
 
 ExternalProject_Add(llvm
     URL
-        "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/llvm-project-19.1.7.src.tar.xz"
+        "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/llvm-project-20.1.8.src.tar.xz"
     URL_HASH
-        "SHA256=82401fea7b79d0078043f7598b835284d6650a75b93e64b6f761ea7b63097501"
+        "SHA256=6898f963c8e938981e6c4a302e83ec5beb4630147c7311183cf61069af16333d"
     CMAKE_CACHE_ARGS
         ${CMAKE_ARGS}
         ${LLVM_ARGS}

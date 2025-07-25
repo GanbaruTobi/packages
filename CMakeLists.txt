@@ -42,7 +42,7 @@ message(STATUS "meson: ${meson_EXECUTABLE}")
 simple_git(https://github.com/nlohmann/json v3.11.3
     "-DJSON_BuildTests:STRING=OFF"
 )
-simple_git(https://github.com/ToruNiina/toml11 1340692 # master (2023-06-06)
+simple_git(https://github.com/ToruNiina/toml11 2a18a89008d3daac6d8f9db03ddd582173032c7a # master (2023-06-06)
     "-DCMAKE_CXX_STANDARD:STRING=11"
 )
 simple_git(https://github.com/yhirose/cpp-httplib v0.13.1
@@ -50,9 +50,9 @@ simple_git(https://github.com/yhirose/cpp-httplib v0.13.1
     "-DHTTPLIB_IS_USING_BROTLI:STRING=OFF"
     "-DHTTPLIB_USE_BROTLI_IF_AVAILABLE:STRING=OFF"
 )
-simple_git(https://github.com/gflags/gflags v2.2.2
+simple_git(https://github.com/gflags/gflags 52e94563eba1968783864942fedf6e87e3c611f4
 )
-simple_git(https://github.com/google/glog v0.6.0
+simple_git(https://github.com/google/glog v0.7.1
     "-DGFLAGS_USE_TARGET_NAMESPACE:STRING=ON"
     "-DBUILD_TESTING:STRING=OFF"
 )
@@ -60,23 +60,24 @@ simple_git(https://github.com/google/googletest v1.15.2
     "-Dgtest_force_shared_crt:STRING=ON"
     "-DGFLAGS_USE_TARGET_NAMESPACE:STRING=ON"
 )
-simple_git(https://github.com/redis/hiredis afc29ee)
-simple_git(https://github.com/Tessil/ordered-map v1.1.0)
-simple_git(https://github.com/fmtlib/fmt 10.2.1
+simple_git(https://github.com/redis/hiredis 294782041ef5841293dea3acc8ca9a28597bedc8)
+simple_git(https://github.com/Tessil/ordered-map 46adc0e4720e9d00b6d63f62168840a086ab26e0)
+simple_git(https://github.com/fmtlib/fmt 11.2.0
     "-DFMT_DOC:STRING=OFF"
     "-DFMT_TEST:STRING=OFF"
     "-DFMT_SYSTEM_HEADERS:STRING=ON"
 )
-simple_git(https://github.com/gabime/spdlog e593f66
+
+simple_git(https://github.com/gabime/spdlog 9ecdf5c8a1a3ace5673f9fd1857da1b6375b5114
     "-DSPDLOG_FMT_EXTERNAL:STRING=ON"
     "-DSPDLOG_SYSTEM_INCLUDES:STRING=ON"
     "-DSPDLOG_BUILD_EXAMPLE:STRING=OFF"
 )
-simple_git(https://github.com/lief-project/LIEF 0.15.1
+simple_git(https://github.com/lief-project/LIEF 2ff359890ebb066d48abd631a830c2baeb7cf0e5
     "-DLIEF_EXAMPLES:STRING=OFF"
     "-DLIEF_USE_CCACHE:STRING=OFF"
 )
-simple_git(https://github.com/capstone-engine/capstone 5.0.3
+simple_git(https://github.com/capstone-engine/capstone 5.0.6
     "-DCAPSTONE_BUILD_TESTS:STRING=OFF"
     "-DCAPSTONE_BUILD_CSTOOL:STRING=OFF"
 )
@@ -96,9 +97,10 @@ include(bitwuzla.cmake)
 if(NOT USE_EXTERNAL_LLVM)
     include(llvm.cmake)
 endif()
-simple_git(https://github.com/LLVMParty/remill llvm-19-v2
+simple_git(https://github.com/kyle-elliott/remill 799a7b93b61db5b1834f48efe247e2d4c55b0182
     "-DUSE_SYSTEM_DEPENDENCIES:STRING=ON"
     "-DREMILL_ENABLE_TESTING:STRING=OFF"
 )
+
+
 simple_git(https://github.com/LLVMParty/alive2 cmake-package-souper-v7)
-simple_git(https://github.com/LLVMParty/souper cmake-package-v8)
